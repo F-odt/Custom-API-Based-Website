@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Quotes</h1>
+<div class="tiles">
+    {% for quote in quotes %}
+        <div class="tile">
+            <p>{{ quote.dialog }}</p>
+            <p><strong>Character:</strong> {{ quote.character }}</p>
+            <p><strong>Movie:</strong> {{ quote.movie }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

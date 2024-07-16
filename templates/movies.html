@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Movies</h1>
+<div class="tile-container">
+    {% for movie in movies %}
+    <div class="tile">
+        <h3>{{ movie.name }}</h3>
+        <a href="{{ url_for('movie_detail', id=movie._id) }}">More Info</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

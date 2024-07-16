@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Chapters</h1>
+<div class="tiles">
+    {% for chapter in chapters %}
+        <div class="tile">
+            <h2>{{ chapter.chapterName }}</h2>
+            <p>Book ID: {{ chapter.book }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

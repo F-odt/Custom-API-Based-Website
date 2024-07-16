@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ character.name }}</h1>
+<p>Race: {{ character.race }}</p>
+<p>Gender: {{ character.gender }}</p>
+<p>Birth: {{ character.birth }}</p>
+<p>Death: {{ character.death }}</p>
+<p>Realm: {{ character.realm }}</p>
+<p>Spouse: {{ character.spouse }}</p>
+<p>Height: {{ character.height }}</p>
+<p>Hair: {{ character.hair }}</p>
+<p>Wiki URL: <a href="{{ character.wikiUrl }}">{{ character.wikiUrl }}</a></p>
+
+<h2>Quotes</h2>
+<ul>
+    {% for quote in quotes %}
+        <li>{{ quote.dialog }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

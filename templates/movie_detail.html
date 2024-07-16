@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ movie.name }}</h1>
+<p>Runtime: {{ movie.runtimeInMinutes }} minutes</p>
+<p>Budget: ${{ movie.budgetInMillions }} million</p>
+<p>Revenue: ${{ movie.boxOfficeRevenueInMillions }} million</p>
+<p>Academy Award Nominations: {{ movie.academyAwardNominations }}</p>
+<p>Academy Award Wins: {{ movie.academyAwardWins }}</p>
+<p>Rotten Tomatoes Score: {{ movie.rottenTomatoesScore }}%</p>
+
+<h2>Quotes</h2>
+<ul>
+    {% for quote in quotes %}
+        <li>{{ quote.dialog }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

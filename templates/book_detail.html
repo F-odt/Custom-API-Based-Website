@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ book.name }}</h1>
+<p>ID: {{ book._id }}</p>
+
+{% if chapters %}
+<h2>Chapters</h2>
+<ul>
+    {% for chapter in chapters %}
+    <li>{{ chapter.chapterName }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No chapters available for this book.</p>
+{% endif %}
+
+<a href="{{ url_for('books') }}">Back to Books</a>
+{% endblock %}
